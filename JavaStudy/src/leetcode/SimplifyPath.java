@@ -9,10 +9,12 @@ public class SimplifyPath {
 		String[] directories = path.split("/");
 
 		for (String directory : directories) {
+			// 디렉토리 변경 없음
 			if (directory.isEmpty() || directory.equals(".")) {
 				continue;
 			}
 
+			// 상위 폴더 이동
 			if (!directory.equals("..")) {
 				pathStack.push(directory);
 				continue;
